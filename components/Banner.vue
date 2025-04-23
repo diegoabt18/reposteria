@@ -1,9 +1,9 @@
 <template>
-    <section class="bg-[#fffcc8] pt-12 overflow-hidden pl-4 relative">
+    <section class="bg-[#fffcc8] pt-12 overflow-hidden  relative">
       <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 items-center pb-16">
         
         <!-- Texto -->
-        <div>
+        <div class="pl-4">
           <h1 class="text-5xl font-extrabold">
             <span class="text-[#A8A35E]">Deleítate</span>
             <span class="text-[#333C2F]"> con cada bocado!</span>
