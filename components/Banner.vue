@@ -1,17 +1,48 @@
 <template>
-    <section class="relative bg-cover bg-center h-[60vh] flex items-center justify-center text-center"
-        style="background-image: url('/images/banner2.jpeg')">
-        <div class="bg-black bg-opacity-50 p-8 rounded-xl max-w-2xl">
-            <h1 class="text-4xl md:text-5xl font-bold text-[#EFE49D] mb-4">
-                Endulzamos tus momentos más especiales
-            </h1>
-            <p class="text-lg text-white mb-6">
-                Postres artesanales con ingredientes naturales y mucho amor ❤️
-            </p>
-            <button
-                class="bg-[#EFE49D] text-[#333C2F] px-6 py-3 rounded-lg font-semibold hover:bg-[#A8A35E] transition">
-                Ver Productos
-            </button>
+    <section class="bg-[#fffcc8] pt-12 overflow-hidden pl-4 relative">
+      <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 items-center pb-16">
+        
+        <!-- Texto -->
+        <div>
+          <h1 class="text-5xl font-extrabold">
+            <span class="text-[#A8A35E]">Deleítate</span>
+            <span class="text-[#333C2F]"> con cada bocado!</span>
+          </h1>
+          <p class="mt-4 text-[#333C2F] max-w-md">
+            Repostería artesanal con ingredientes naturales, pasión y tradición. Hecho con amor desde nuestra cocina hasta tu mesa.
+          </p>
+          <div class="mt-6">
+            <NuxtLink
+              to="/shop"
+              class="inline-block bg-[#333C2F] text-[#FFFFFF] px-6 py-3 rounded-full hover:bg-[#4B5136] transition font-bold"
+            >
+              COMPRAR AHORA!
+            </NuxtLink>
+          </div>
         </div>
+  
+        <!-- Imagen -->
+        <div class="relative">
+          <img
+            src="/images/banner9.png"
+            alt="Croissant"
+            class="w-full max-w-lvh mx-auto drop-shadow-lg"
+          />
+        </div>
+      </div>
+  
+      <!-- Onda decorativa inferior -->
+      <div class="overflow-hidden leading-none">
+        <svg viewBox="0 0 1440 320" class="w-full h-24 block" preserveAspectRatio="none">
+          <path
+            fill="#EFE49D"
+            d="M0,160L60,149.3C120,139,240,117,360,106.7C480,96,600,96,720,117.3C840,139,960,181,1080,186.7C1200,192,1320,160,1380,144L1440,128V320H0Z"
+          />
+        </svg>
+      </div>
     </section>
-</template>
+  </template>
+  
+  <script setup>
+  // No script logic needed
+  </script>
