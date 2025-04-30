@@ -3,10 +3,11 @@
       <div class="container mx-auto flex items-center justify-between px-6">
         <div class="text-[#EFE49D] text-2xl font-bold">Sano Delirio</div>
         <nav class="hidden md:flex space-x-6 text-[#A8A35E] font-medium">
-          <a href="#" class="hover:text-[#EFE49D]">Inicio</a>
+          <NuxtLink to="/" class="hover:text-[#EFE49D]">Inicio</NuxtLink>
           <a href="#" class="hover:text-[#EFE49D]">Productos</a>
           <a href="#" class="hover:text-[#EFE49D]">Promociones</a>
           <a href="#" class="hover:text-[#EFE49D]">Contacto</a>
+          <NuxtLink to="/about" class="hover:underline">Acerca de</NuxtLink>
         </nav>
         <button class="md:hidden text-[#EFE49D]" @click="toggleMenu">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -22,6 +23,7 @@
         <a href="#" class="block hover:text-[#EFE49D]">Productos</a>
         <a href="#" class="block hover:text-[#EFE49D]">Promociones</a>
         <a href="#" class="block hover:text-[#EFE49D]">Contacto</a>
+        <NuxtLink to="/about" class="hover:underline">Acerca de</NuxtLink>
       </div>
     </header>
   </template>
