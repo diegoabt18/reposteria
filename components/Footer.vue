@@ -25,9 +25,9 @@
             <div>
                 <h3 class="text-xl font-semibold mb-4">Contáctanos</h3>
                 <ul class="text-[#DAD4A0] text-sm space-y-2">
-                    <li>📍 Calle Dulce 123, CDMX</li>
-                    <li>📞 +52 55 1234 5678</li>
-                    <li>✉️ hola@sanodelirio.mx</li>
+                    <li>📍 Av 0 # 0N - 15 local 5, quinta Bosch </li>
+                    <li>📞 +57 311 324 5413</li>
+                    <li>✉️ hola@sanodelirio.co</li>
                 </ul>
             </div>
         </div>

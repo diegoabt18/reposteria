@@ -1,9 +1,13 @@
 <template>
-    <div class="min-h-screen bg-gradient-to-r from-[#1f261c] via-[#2b3327] to-[#4B5136] text-white font-sans">
+    <div class="min-h-screen bg-gradient-to-r bg-[#fffcc8] text-white font-sans">
       <Header />
       <Banner />
-  
+      <tablaDeContenido/>
+      bg-[#fffcc8] 
       <main class="p-8 max-w-7xl mx-auto">
+
+                <!-- Promociones -->
+                <Promotions />
         <!-- Productos -->
         <section ref="productsSection" class="mb-16">
           <h2 class="text-3xl text-center font-semibold text-[#EFE49D] mb-8">Nuestros Productos</h2>
@@ -20,6 +24,8 @@
               class="w-full p-3 border rounded-xl shadow focus:outline-none focus:ring focus:ring-yellow-400"
             />
           </div>
+
+          
   
           <!-- 🛍️ Lista de productos -->
           <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
@@ -62,8 +68,7 @@
           </div>
         </section>
   
-        <!-- Promociones -->
-        <Promotions />
+
       </main>
   
       <Footer />
@@ -78,6 +83,7 @@
   import ProductCard from '@/components/ProductCard.vue'
   import Promotions from '@/components/Promotions.vue'
   import Footer from '@/components/Footer.vue'
+  import tablaDeContenido from '~/components/tablaDeContenido.vue'
   
   // 🧁 Lista de productos
   const products = ref([
