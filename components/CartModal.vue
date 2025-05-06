@@ -23,6 +23,14 @@ const total = computed(() =>
   cartStore.cart.reduce((sum, item) => sum + item.price, 0)
 )
 
+// Eliminar un producto del carrito
+const removeItem = (itemId) => {
+  const itemIndex = cartStore.cart.findIndex(item => item.id === itemId)
+  if (itemIndex > -1) {
+    cartStore.cart.splice(itemIndex, 1)  // Elimina el primer producto encontrado
+  }
+}
+
 // Checkout con mensaje para WhatsApp
 const checkout = () => {
   const productsText = groupedCart.value.map(item => {
@@ -43,23 +51,27 @@ const checkout = () => {
 </script>
 
 <template>
-  <div class="fixed inset-0 z-50 bg-white/30 backdrop-blur-sm flex justify-center items-center">
-    <div class="bg-white rounded-2xl shadow-2xl p-6 max-w-2xl w-full">
-      <h2 class="text-2xl font-semibold mb-6 text-gray-800 text-center">🛒 Carrito de Compras</h2>
+  <div class="fixed inset-0 z-50 bg-white/30 backdrop-blur-sm flex justify-center items-center px-4">
+    <div class="bg-white rounded-2xl shadow-2xl p-4 sm:p-6 w-full max-w-2xl max-h-[90vh] overflow-y-auto">
+      <h2 class="text-xl sm:text-2xl font-semibold mb-4 sm:mb-6 text-gray-800 text-center">
+        🛒 Carrito de Compras
+      </h2>
 
       <div v-if="cartStore.cart.length === 0" class="text-center text-gray-500">
         Tu carrito está vacío
       </div>
 
-      <div v-else class="overflow-x-auto">
+      <!-- Tabla en pantallas medianas y grandes -->
+      <div v-if="cartStore.cart.length > 0" class="hidden sm:block overflow-x-auto">
         <table class="w-full text-left text-gray-700">
           <thead>
             <tr class="border-b">
               <th class="pb-2">Imagen</th>
               <th class="pb-2">Producto</th>
               <th class="pb-2">Cantidad</th>
-              <th class="pb-2">Precio unitario</th>
+              <th class="pb-2">Unitario</th>
               <th class="pb-2">Subtotal</th>
+              <th class="pb-2">Acción</th>
             </tr>
           </thead>
           <tbody>
@@ -71,22 +83,55 @@ const checkout = () => {
               <td>x{{ item.quantity }}</td>
               <td>{{ item.price }}$</td>
               <td>{{ item.price * item.quantity }}$</td>
+              <td>
+                <button @click="removeItem(item.id)" class="text-red-500 hover:text-red-700">
+                  Eliminar
+                </button>
+              </td>
             </tr>
           </tbody>
         </table>
+      </div>
 
-        <div class="flex justify-end text-lg font-semibold text-gray-800 mt-4">
-          Total: {{ total }}$
+      <!-- Vista tipo tarjeta en móviles -->
+      <div v-if="cartStore.cart.length > 0" class="block sm:hidden space-y-4">
+        <div
+          v-for="item in groupedCart"
+          :key="item.id"
+          class="flex items-center gap-4 border p-3 rounded-lg shadow-sm bg-gray-50"
+        >
+          <img :src="item.image" alt="Producto" class="w-16 h-16 object-cover rounded" />
+          <div class="flex-1">
+            <p class="font-semibold text-gray-800">{{ item.name }}</p>
+            <p class="text-sm text-gray-600">Cantidad: x{{ item.quantity }}</p>
+            <p class="text-sm text-gray-600">Unitario: {{ item.price }}$</p>
+            <p class="text-sm font-medium text-gray-700">
+              Subtotal: {{ item.price * item.quantity }}$
+            </p>
+            <button @click="removeItem(item.id)" class="text-red-500 hover:text-red-700">
+            Eliminar
+          </button>
+          </div>
+       
         </div>
       </div>
 
-      <div class="flex justify-end gap-4 mt-6">
-        <button @click="$emit('close')" class="px-4 py-2 rounded-lg bg-gray-200 hover:bg-gray-300 transition">
+      <!-- Total -->
+      <div class="flex justify-end text-base sm:text-lg font-semibold text-gray-800 mt-4">
+        Total: {{ total }}$
+      </div>
+
+      <!-- Botones -->
+      <div class="flex flex-col sm:flex-row justify-end gap-3 sm:gap-4 mt-6">
+        <button
+          @click="$emit('close')"
+          class="px-4 py-2 rounded-lg bg-gray-200 hover:bg-gray-300 transition w-full sm:w-auto"
+        >
           Cerrar
         </button>
         <button
           @click="checkout"
-          class="px-4 py-2 rounded-lg bg-verde text-white  transition"
+          class="px-4 py-2 rounded-lg bg-verde text-white hover:opacity-90 transition w-full sm:w-auto"
         >
           Finalizar compra
         </button>
