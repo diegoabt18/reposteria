@@ -1,13 +1,18 @@
 module.exports = {
-    theme: {
-      extend: {
-        colors: {
-          primary: '#333C2F',
-          secondary: '#EFE49D',
-          accent: '#A8A35E',
-          dark: '#4B5136',
-          white: '#FFFFFF',
-        },
+  theme: {
+    extend: {
+      colors: {
+        verde: '#5e894c',
+        marronOscuro: '#3d2917',
+        marronClaro: '#7a5b48',
+        pastel: '#ebcd95',
+        grisClaro: '#eae6e6',
+        blanco: '#FFFFFF'
+      },
+      fontFamily: {
+        playflairDisplay: ['PLAYFLAIR_DISPLAY', 'sans-serif'],
+        amaticSCRegular: ['AMATICSC-REGULAR', 'sans-serif'],
       },
     },
-  }
+  },
+}

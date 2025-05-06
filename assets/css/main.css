@@ -1,1 +1,85 @@
 @import "tailwindcss";
+
+.font-display {
+  font-family: 'PLAYFLAIR_DISPLAY', sans-serif;
+}
+
+.font-amatic {
+  font-family: 'AMATICSC-REGULAR', sans-serif;
+}
+
+.font-nunito {
+  font-family: 'NUNITO', sans-serif;
+}
+
+.font-inter {
+  font-family: 'INTER', sans-serif;
+}
+
+
+
+
+:root {
+  /*
+  --verde: #5e894c;         
+  --dorado: #4a2e1f;   
+  --limon: #a67c63;    
+  --verde-pastel: #f3e7a0;         
+  --gris-claro: #f0eeee;     
+  --blanco: #ffffff;         
+*/
+  --verde: #333C2F;
+  --dorado: #EFE49D;
+  --limon: #A8A35E;
+  --verde-pastel: #4B5136;
+  --blanco: #FFFFFF;
+
+}
+
+.verde {
+  color: var(--verde);
+}
+
+.dorado {
+  color: var(--dorado);
+}
+
+.limon {
+  color: var(--limon);
+}
+
+.verdePastel {
+  color: var(--verde-pastel);
+}
+
+
+.blanco {
+  color: var(--blanco);
+}
+
+.blancoHo :hover {
+    color: var(--blanco);
+}
+
+/* Clases de fondo */
+.bg-verde {
+  background-color: var(--verde);
+}
+
+.bg-dorado {
+  background-color: var(--dorado);
+}
+
+.bg-limon {
+  background-color: var(--limon);
+}
+
+.bg-verdePastel {
+  background-color: var(--verde-pastel);
+}
+
+
+
+.bg-blanco {
+  background-color: var(--blanco);
+}

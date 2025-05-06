@@ -1,0 +1,34 @@
+@font-face {
+  font-family: 'PLAYFLAIR_DISPLAY';
+  src: url('@/assets/fonts/PlayfairDisplay-VariableFont_wght.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'AMATICSC-REGULAR';
+  src: url('@/assets/fonts/AmaticSC-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NUNITO';
+  src: url('@/assets/fonts/Nunito-VariableFont_wght.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'INTER';
+  src: url('@/assets/fonts/Inter-VariableFont_opsz,wght.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+body {
+  font-family: 'PLAYFLAIR_DISPLAY', sans-serif;
+}

@@ -32,8 +32,8 @@
   </template>
   
   <script setup>
-  import Header from '@/components/Header.vue'
-  import Footer from '@/components/Footer.vue'
+  import Header from '~/components/Header.vue'
+  import Footer from '~/components/Footer.vue'
   import tablaDeContenido from '~/components/tablaDeContenido.vue'
   import { Carousel3d, Slide } from 'vue3-carousel-3d'
   import 'vue3-carousel-3d/dist/index.css'
