@@ -1,6 +1,7 @@
 <template>
     <Header />
     <Menu :categories="categories" :products="products" @add-to-cart="addToCart" />
+    <Footer />
 </template>
 
 <script setup>
@@ -10,6 +11,11 @@ import { useProductStore } from '@/stores/product'
 
 const productStore = useProductStore()
 const products = productStore.products
+
+import { useCartStore } from '@/stores/cart'
+
+const cartStore = useCartStore()
+const showCart = ref(false) 
 
 
 const categories = computed(() => {
@@ -24,4 +30,11 @@ const categories = computed(() => {
   })
   return Object.values(catMap)
 })
+
+
+// Función para agregar productos al carrito
+function addToCart(product) {
+  cartStore.addToCart(product)
+  showCart.value = true
+}
 </script>

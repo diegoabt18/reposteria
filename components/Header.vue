@@ -31,7 +31,7 @@
         </button>
       </div>
 
-      <div class="limon  md:hidden lg:flex text-2xl lg:text-4xl font-bold font-amatic "> Sano Delirio</div>
+      <div class="limon  md:hidden text-2xl lg:text-4xl font-bold font-amatic "> Sano Delirio</div>
 
       <!-- Botón hamburguesa -->
       <button class="md:hidden text-pastel" @click="menuOpen = !menuOpen">

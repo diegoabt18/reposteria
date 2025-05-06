@@ -1,5 +1,6 @@
 <template>
   <section class="p-6 bg-white shadow rounded mb-6">
+    <Toast ref="toastRef" />
     <div v-for="category in categories" :key="category.name" class="mb-10">
       <!-- Header de Categoría -->
       <div class="text-center mb-8">
@@ -25,7 +26,7 @@
             <p class="text-sm text-gray-600 mb-2">{{ product.description }}</p>
 
             <!-- Botón alineado a la derecha -->
-            <button @click="emit('add-to-cart', product)"
+            <button @click="handleAddToCart(product)"
               class="self-end text-lg font-bold verde bg-dorado px-3 py-1 rounded hover:bg-primary-dark transition-colors">
               Agregar al carrito
             </button>
@@ -37,6 +38,25 @@
 </template>
 
 <script setup>
+
+import Toast from './Toast.vue'
+import { ref, onMounted } from 'vue'
+
+
+const toastRef = ref()
+
+
+function triggerToast(name) {
+  console.log("pedo")
+  toastRef.value?.showToast('Producto '+name+'! agregado con exito')
+}
+
+function handleAddToCart(product) {
+  emit('add-to-cart', product)
+  triggerToast(product.name)
+
+}
+
 const props = defineProps({
   categories: {
     type: Array,
@@ -53,4 +73,6 @@ const emit = defineEmits(['add-to-cart'])
 const productsByCategory = (categoryName) => {
   return props.products.filter(p => p.category === categoryName)
 }
+
+
 </script>

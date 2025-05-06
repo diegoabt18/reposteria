@@ -1,7 +1,7 @@
 <template>
     <div class="text-center mb-8">
         <h3
-        class="text-xl md:text-2xl uppercase text-marronClaro font-semibold tracking-wide mb-2 flex items-center justify-center lg:justify-start gap-2">
+        class="text-xl md:text-2xl uppercase text-marronClaro font-semibold tracking-wide mb-2 flex items-center justify-center  gap-2">
         <Icon name="my-icon:coffee-beans " /> Categorias
       </h3>
         <h2 class="text-5xl font-bold text-gray-800">Nuestros Productos</h2>

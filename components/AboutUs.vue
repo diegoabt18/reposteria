@@ -31,7 +31,7 @@
         <p class="italic font-bold pastel text-3xl text-marronClaro font-amatic">Sano delirio</p>
         <!-- Botón -->
         <NuxtLink
-          to="/shop"
+          to="/about"
           class="bg-verdePastel hover-button font-semibold blanco px-6 py-3 rounded-full transition duration-300 text-center"
         >
           Descubre Más

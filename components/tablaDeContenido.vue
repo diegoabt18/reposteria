@@ -1,53 +1,7 @@
-<!--<template>
-  <section class="w-full text-white ">
-    <div class="flex flex-col lg:flex-row w-full min-h-screen">
-      
-      
-      <div class="w-full lg:w-1/2 flex items-center justify-center p-8 bg-dorado h-[500px]">
-        <div class="text-center lg:text-left max-w-lg">
-          <h1 class="text-4xl font-bold tracking-widest uppercase">Cafetería y Repostería</h1>
-          <p class="mt-3 tracking-wide text-md">
-            Tienda Av 0# 0N - 15 local 5, Quinta Bosch
-          </p>
-
-          <div class="mt-6 flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
-            <NuxtLink
-              to="/menu"
-              class="bg-green-400 hover:bg-green-600 text-white px-5 py-2 rounded-md flex items-center gap-2 transition"
-            >
-              <FontAwesomeIcon icon="coffee" size="lg" />
-              Menú
-            </NuxtLink>
-            <NuxtLink
-              to="/horarios"
-              class="bg-green-700 hover:bg-green-800 text-white px-5 py-2 rounded-md flex items-center gap-2 transition"
-            >
-              <FontAwesomeIcon icon="calendar" size="lg" />
-              Horarios
-            </NuxtLink>
-          </div>
-        </div>
-      </div>
-
-      <div class="w-full lg:w-1/2  lg:h-auto overflow-hidden">
-        <img
-          src="/images/banner5.jpeg"
-          alt="Banner de cafetería"
-          class="w-full h-full object-cover"
-        />
-      </div>
-    </div>
-  </section>
-</template>
-
-<script setup>
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-</script>
--->
 
 <template>
   <section id="reposteria" class="flex flex-col lg:flex-row items-center justify-center gap-10 px-6 py-16 bg-white">
-
+    <HoursModal v-if="showHorario" @close="cerrarModal" />
     <!-- Texto -->
     <div class="w-full lg:w-1/2 text-center lg:text-left font-playflairDisplay">
       <h3
@@ -58,7 +12,7 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
         Cafetería y Repostería
       </h2>
       <p class="text-base md:text-lg text-gray-600 mb-4 font-nunito">
-        "Visítanos en la Tienda, Av. 0 #0N-15, Local 5, Quinta Bosch. Te atendemos de lunes a viernes." <span
+        "Visítanos en la Tienda, Av. 0 #0N-15, Local 5, Quinta Bosch. Te atendemos de lunes a sabado." <span
           class="italic">Descubre más información haciendo clic en los botones a continuación.</span>
       </p>
 
@@ -71,11 +25,11 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
           <FontAwesomeIcon icon="coffee" size="lg" />
           Menú
         </NuxtLink>
-        <NuxtLink to="/horarios"
+        <button @click="abrirModal"
           class="bg-verdePastel hover-button font-semibold blanco px-6 py-3 rounded-full transition duration-300 text-center">
           <FontAwesomeIcon icon="calendar" size="lg" />
           Horarios
-        </NuxtLink>
+        </button>
 
       </div>
     </div>
@@ -95,3 +49,18 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
   color: var(--verde);
 }
 </style>
+
+<script setup>
+import HoursModal from './HoursModal.vue'
+
+
+const showHorario = ref(false)
+
+const abrirModal = () => {
+  showHorario.value = true
+}
+
+const cerrarModal = () => {
+  showHorario.value = false
+}
+</script>

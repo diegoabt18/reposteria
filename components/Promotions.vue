@@ -2,7 +2,7 @@
   <section id="promociones" class="my-20 px-4 sm:px-8 lg:px-16 bg-limon py-20">
     <!-- Título -->
     <h3
-        class="text-xl md:text-2xl text-marronClaro font-semibold tracking-wide mb-2 flex items-center justify-center lg:justify-start gap-2">
+        class="text-xl md:text-2xl text-marronClaro font-semibold tracking-wide mb-2 flex items-center justify-center  gap-2">
         <Icon name="my-icon:coffee-beans" /> EVENTOS
       </h3>
     <h2 class="text-3xl md:text-5xl text-center font-bold  mb-4">

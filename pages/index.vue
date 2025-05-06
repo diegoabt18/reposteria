@@ -1,5 +1,6 @@
 <template >
   <div class="w-full">
+    <Toast ref="toastRef" />
     <!-- Header con carrito -->
     <Header :cart="cart" :cartVisible="showCart" @toggle-cart="toggleCart" />
 
@@ -55,6 +56,7 @@ const cartStore = useCartStore()
 const showCart = ref(false)  // Para controlar la visibilidad del carrito
 const showHours = ref(false)  // Para controlar la visibilidad del modal de horarios
 
+
 import { useProductStore } from '@/stores/product'
 
 const productStore = useProductStore()
@@ -79,14 +81,15 @@ const filteredProducts = ref([...products])
 // Función para aplicar el filtro por categoría
 function applyFilter(category) {
   filteredProducts.value = category
-    ? products.value.filter(p => p.category === category)
+    ? products.filter(p => p.category === category)
     : [...products.value]
 }
 
 // Función para agregar productos al carrito
 function addToCart(product) {
   cartStore.addToCart(product)
-  showCart.value = true
+  triggerToast(product.name)
+  //showCart.value = true
 }
 
 // Función para redirigir a WhatsApp para realizar el checkout
@@ -101,6 +104,12 @@ function redirectToWhatsApp() {
 // Función para alternar la visibilidad del carrito
 function toggleCart() {
   showCart.value = !showCart.value
+}
+
+const toastRef = ref()
+function triggerToast(name) {
+  
+  toastRef.value?.showToast('Producto '+name+'! agregado con exito')
 }
 </script>
 
