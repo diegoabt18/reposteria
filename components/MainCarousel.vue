@@ -1,9 +1,10 @@
 <template>
-  <UCarousel :autoplay="{ delay: 6000 }" auto-height dots :items="slides" :ui="{
+  <div class="w-full overflow-hidden">
+    <UCarousel :autoplay="{ delay: 6000 }" auto-height  :items="slides" :ui="{
     container: 'transition-[height] h-full',
     item: 'w-full h-screen flex-shrink-0',
   }" class="w-full mx-auto">
-    <template #default="{ item }" class="w-[1000px]">
+    <template #default="{ item }" class="">
       <div :style="{ backgroundImage: `url(${item.image})` }"
         class="min-h-[300px] w-full h-full bg-cover bg-center relative flex items-center">
         <div class="absolute inset-0 bg-black/60 flex items-center">
@@ -33,6 +34,7 @@
       </div>
     </template>
   </UCarousel>
+  </div>
 </template>
 
 <script setup>

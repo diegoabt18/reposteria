@@ -1,5 +1,5 @@
-<template>
-  <div>
+<template >
+  <div class="w-full">
     <!-- Header con carrito -->
     <Header :cart="cart" :cartVisible="showCart" @toggle-cart="toggleCart" />
 

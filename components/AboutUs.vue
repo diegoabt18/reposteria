@@ -1,5 +1,5 @@
 <template>
-  <section class="flex flex-col lg:flex-row items-center justify-center gap-10 px-6 py-16 bg-white">
+  <section class="flex flex-col lg:flex-row items-center justify-center gap-10 px-6 py-16 bg-white overflow-hidden">
     <!-- Imagen de la persona -->
     <div class="w-full lg:w-1/2 relative">
       <img src="/images/aboutUs.png" alt="Mujer tomando café" class="rounded-lg w-full max-h-[800px] object-cover" />
