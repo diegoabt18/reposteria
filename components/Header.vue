@@ -2,37 +2,36 @@
   <header class="bg-verde text-pastel py-1 shadow-md font-display w-full">
     <div class="  flex  gap-1 lg:gap-0 items-center justify-between pl-4  pr-4">
       <!-- Logo -->
-      <div class="flex align-middle items-center gap-1">
+      <div class=" hidden md:flex align-middle items-center gap-1">
         <div class="circulo-externo">
           <div class="circulo-interno">
             <img src="/images/logoSinFondo.png" alt="" class=" h-14">
           </div>
         </div>
-        <div class="limon hidden lg:flex lg:text-4xl font-bold font-amatic "> Sano Delirio</div>
+        <div class="limon  lg:flex lg:text-4xl font-bold font-amatic "> Sano Delirio</div>
       </div>
+
+   
 
       <!-- Navegación escritorio -->
       <nav class="hidden md:flex space-x-6 text-lg font-extrabold limon">
         <NuxtLink to="/" class="hover:text-white transition">Inicio</NuxtLink>
         <NuxtLink to="/menu" class="hover:text-white transition">Menu</NuxtLink>
-        <NuxtLink to="/productos" class="hover:text-white transition">Productos</NuxtLink>
-        <NuxtLink to="/promociones" class="hover:text-white transition">Promociones</NuxtLink>
-        <NuxtLink to="/contacto" class="hover:text-white transition">Contacto</NuxtLink>
         <NuxtLink to="/about" class="hover:text-white text-pastel">Acerca de</NuxtLink>
       </nav>
 
       <!-- Botón carrito -->
       <div class="relative mr-4">
-  <button @click="toggleCart" class="text-pastel">
-    <Icon name="my-icon:shopping-cart" class="w-10 h-10" />
-    <span
-      v-if="cartItems > 0"
-      class="absolute -top-2 -right-2 flex items-center justify-center w-6 h-6 bg-blanco text-red-700 font-extrabold rounded-full text-sm"
-    >
-     {{ cartItems }}
-    </span>
-  </button>
-</div>
+        <button @click="toggleCart" class="text-pastel">
+          <Icon name="my-icon:shopping-cart" class="w-7 h-7 md:w-10 md:h-10" />
+          <span v-if="cartItems > 0"
+            class="absolute -top-1 -right-2 flex items-center justify-center w-3 h-3 md:w-6 md:h-6 bg-blanco text-red-700 font-extrabold rounded-full text-sm">
+            {{ cartItems }}
+          </span>
+        </button>
+      </div>
+
+      <div class="limon  md:hidden lg:flex text-2xl lg:text-4xl font-bold font-amatic "> Sano Delirio</div>
 
       <!-- Botón hamburguesa -->
       <button class="md:hidden text-pastel" @click="menuOpen = !menuOpen">
@@ -43,13 +42,10 @@
     </div>
 
     <!-- Menú móvil -->
-    <div v-if="menuOpen" class="md:hidden bg-marronClaro px-6 py-4 space-y-2 text-blanco">
-      <NuxtLink to="/" class="block hover:text-pastel" @click="menuOpen = false">Inicio</NuxtLink>
-      <NuxtLink to="/menu" class="hover:text-white transition">Menu</NuxtLink>
-      <NuxtLink to="/productos" class="block hover:text-pastel" @click="menuOpen = false">Productos</NuxtLink>
-      <NuxtLink to="/promociones" class="block hover:text-pastel" @click="menuOpen = false">Promociones</NuxtLink>
-      <NuxtLink to="/contacto" class="block hover:text-pastel" @click="menuOpen = false">Contacto</NuxtLink>
-      <NuxtLink to="/about" class="block hover:text-pastel" @click="menuOpen = false">Acerca de</NuxtLink>
+    <div v-if="menuOpen" class="md:hidden bg-marronClaro limon">
+      <NuxtLink to="/" class="block hover:text-pastel p-4" @click="menuOpen = false">Inicio</NuxtLink>
+      <NuxtLink to="/menu" class="hover:text-white transition  p-4">Menu</NuxtLink>
+      <NuxtLink to="/about" class="block hover:text-pastel  p-4" @click="menuOpen = false">Acerca de</NuxtLink>
     </div>
 
     <!-- Modal carrito -->
@@ -87,7 +83,7 @@ const redirectToWhatsApp = () => {
 .circulo-externo {
   width: 70px;
   height: 70px;
-  border: 2px solid  var(--verde-pastel);
+  border: 2px solid var(--verde-pastel);
   /* Borde exterior (marrón claro) */
   border-radius: 50%;
   display: flex;

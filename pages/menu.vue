@@ -18,7 +18,7 @@ const categories = computed(() => {
     if (!catMap[p.category]) {
       catMap[p.category] = {
         name: p.category,
-        image: p.image // Usa una imagen representativa para la categoría
+        image: p.categoryImg // Usa una imagen representativa para la categoría
       }
     }
   })

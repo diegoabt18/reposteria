@@ -1,12 +1,16 @@
 <template>
-  <section class="my-20 px-4 sm:px-8 lg:px-16 bg-limon py-20">
+  <section id="promociones" class="my-20 px-4 sm:px-8 lg:px-16 bg-limon py-20">
     <!-- Título -->
+    <h3
+        class="text-xl md:text-2xl text-marronClaro font-semibold tracking-wide mb-2 flex items-center justify-center lg:justify-start gap-2">
+        <Icon name="my-icon:coffee-beans" /> EVENTOS
+      </h3>
     <h2 class="text-3xl md:text-5xl text-center font-bold  mb-4">
       Promociones del Mes
     </h2>
 
     <!-- Descripción -->
-    <p class="text-center text-lg text-gray-700 max-w-3xl mx-auto mb-12 font-nunito">
+    <p class="text-center text-lg verde max-w-3xl mx-auto mb-12 font-nunito">
       Este mes, déjate sorprender con nuestras promociones especiales diseñadas para cautivar tu paladar. 
       Disfruta sabores únicos, combos exclusivos y descuentos irresistibles en tus productos favoritos. 
       ¡No dejes pasar estas oportunidades pensadas especialmente para ti!

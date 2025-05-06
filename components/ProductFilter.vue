@@ -1,6 +1,9 @@
 <template>
     <div class="text-center mb-8">
-    
+        <h3
+        class="text-xl md:text-2xl uppercase text-marronClaro font-semibold tracking-wide mb-2 flex items-center justify-center lg:justify-start gap-2">
+        <Icon name="my-icon:coffee-beans " /> Categorias
+      </h3>
         <h2 class="text-5xl font-bold text-gray-800">Nuestros Productos</h2>
         <p class="text-gray-500 mt-2 font-nunito">Disfruta de nuestras opciones saludables y deliciosas</p>
     </div>

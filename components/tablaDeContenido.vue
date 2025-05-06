@@ -46,13 +46,13 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 -->
 
 <template>
-  <section class="flex flex-col lg:flex-row items-center justify-center gap-10 px-6 py-16 bg-white">
+  <section id="reposteria" class="flex flex-col lg:flex-row items-center justify-center gap-10 px-6 py-16 bg-white">
 
     <!-- Texto -->
     <div class="w-full lg:w-1/2 text-center lg:text-left font-playflairDisplay">
       <h3
-        class="text-xl md:text-2xl text-marronClaro font-semibold tracking-wide mb-2 flex items-center justify-center lg:justify-start gap-2">
-        <Icon name="my-icon:coffee-beans" /> Carta y horarios de atención
+        class="text-xl md:text-2xl uppercase text-marronClaro font-semibold tracking-wide mb-2 flex items-center justify-center lg:justify-start gap-2">
+        <Icon name="my-icon:coffee-beans " /> Nuestra carta
       </h3>
       <h2 class="text-3xl md:text-5xl font-bold text-marronOscuro mb-6 leading-tight">
         Cafetería y Repostería
