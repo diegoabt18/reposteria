@@ -16,7 +16,7 @@
         <p class="text-xl font-bold text-primary mt-1">${{ product.price }}</p>
       </div>
       <button
-        class="self-start mt-3 px-4 py-2 bg-secondary text-dark rounded hover:opacity-90"
+        class="self-end cursor-pointer hover-button text-lg font-bold verde bg-dorado px-4 py-2 rounded-xl shadow-md hover:shadow-xl hover:bg-primary-dark transform transition duration-300 ease-out active:scale-90 active:ring-4 active:ring-dorado/50"
         @click="$emit('add-to-cart', product)"
       >
         Añadir al carrito
@@ -30,6 +30,12 @@ defineProps({ product: Object })
 </script>
 
 <style scoped>
+
+.hover-button:hover {
+  background-color: var(--verde);
+  color: var(--dorado);
+}
+
 .bg-secondary {
   background-color: #EFE49D;
 }

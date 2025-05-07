@@ -14,10 +14,12 @@
             <div>
                 <h3 class="text-xl font-semibold mb-4">Enlaces</h3>
                 <ul class="space-y-2 text-[#DAD4A0] text-sm">
-                    <li><a href="#" class="hover:text-white">Inicio</a></li>
-                    <li><a href="#" class="hover:text-white">Productos</a></li>
-                    <li><a href="#" class="hover:text-white">Promociones</a></li>
-                    <li><a href="#" class="hover:text-white">Contacto</a></li>
+                    <li><NuxtLink to="/" class="hover:text-white">Inicio</NuxtLink></li>
+                    <li><a href="/menu" class="hover:text-white">Menu</a></li>
+                    <li><a href="/#reposteria" class="hover:text-white">Horarios de atención</a></li>
+                    <li><a href="/#promociones" class="hover:text-white">Promociones</a></li>
+                    <li><a href="/about" class="hover:text-white">Acerca de</a></li>
+                   
                 </ul>
             </div>
 
