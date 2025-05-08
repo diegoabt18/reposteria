@@ -10,7 +10,7 @@ export const useProductStore = defineStore('product', () => {
       price: 9000,
       category: "Snacks & Repostería Saludable",
       categoryImg: "/images/snacks.avif",
-      image: '/images/snacks.avif',
+      image: '/images/product/Brownie_Zen_sin_azucar.jpeg',
       featured: true
     },
     {
@@ -20,7 +20,7 @@ export const useProductStore = defineStore('product', () => {
       price: 7500,
       category: "Snacks & Repostería Saludable",
       categoryImg: "/images/snacks.avif",
-      image: '/images/snacks.avif',
+      image: '/images/product/Energy_Balls_3_unidades.jpeg',
       featured: true
     },
     {
@@ -30,7 +30,7 @@ export const useProductStore = defineStore('product', () => {
       price: 6000,
       category: "Snacks & Repostería Saludable",
       categoryImg: "/images/snacks.avif",
-      image: '/images/snacks.avif',
+      image: '/images/product/Galletas_de_la_Casa.jpeg',
       featured: true
     },
     {
