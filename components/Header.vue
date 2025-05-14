@@ -96,7 +96,7 @@ const redirectToWhatsApp = () => {
     'Hola, quiero finalizar mi compra con los siguientes productos: ' +
     cartStore.cart.map(p => p.name).join(', ')
   )
-  window.open(`https://wa.me/573001112233?text=${message}`, '_blank')
+  window.open(`https://wa.me/573113245413?text=${message}`, '_blank')
 }
 </script>
 

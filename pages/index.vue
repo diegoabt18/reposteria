@@ -98,7 +98,7 @@ function redirectToWhatsApp() {
     'Hola, quiero finalizar mi compra con los siguientes productos: ' +
     cart.value.map(p => p.name).join(', ')
   )
-  window.open(`https://wa.me/573185804841?text=${message}`, '_blank')
+  window.open(`https://wa.me/573113245413?text=${message}`, '_blank')
 }
 
 // Función para alternar la visibilidad del carrito

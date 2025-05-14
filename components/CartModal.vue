@@ -41,7 +41,7 @@ const checkout = () => {
 
   const message = `Hola *SanoDelirio*, me gustaría realizar el siguiente pedido:\n\n${productsText}\n\n${totalText}`
 
-  const whatsappURL = `https://wa.me/573001112233?text=${encodeURIComponent(message)}`
+  const whatsappURL = `https://wa.me/573113245413?text=${encodeURIComponent(message)}`
 
   window.open(whatsappURL, '_blank')
 
